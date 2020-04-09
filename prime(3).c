@@ -6,18 +6,18 @@ void *thread1(void *arg);
 void main()
 {
 	int n;
-	printf("\n Input Thread \n");
-	printf("Enter a number: ");
+	printf("\n Input Thread \n");//resembles the thread for input
+	printf("Enter a number: ");// input
 	scanf("%d",&n);
 
 	pthread_t t1;
-	pthread_create(&t1,NULL,thread1,&n);
+	pthread_create(&t1,NULL,thread1,&n);//creating the thread
 	pthread_join(t1,NULL);
 	
 }
 void *thread1(void *arg)
 {
-	printf("\n Output Thread \n");
+	printf("\n Output Thread \n");//resembles the output thread
 	printf("\nThe prime numbers less than or equal to the input number is \n");
 	int *number=(int *) arg;
 	int n,b,i;
