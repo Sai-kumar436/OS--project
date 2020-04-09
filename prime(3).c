@@ -22,16 +22,16 @@ void *thread1(void *arg)
 	int *number=(int *) arg;
 	int n,b,i;
 	
-	for(b=2;b<=*number;b++)
+	for(b=2;b<=*number;b++)//time complexity= O(n)
 	{
 	
  	 i=2;
- 	while(b%i!=0)
+ 	while(b%i!=0)//time complexity= O(nlogn)
   	{
   		i++;
   	}
   	
- 	if(i==b)
+ 	if(i==b)//time complexity= O(1)
   	{
 		printf("%d\n",b) ;
 		}
